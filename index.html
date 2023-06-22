@@ -11,14 +11,15 @@
 <body>
 
     <div class="container">
+        <!-- Title -->
+        <h1 id="title">QR Code Gen.</h1>
         <!-- QR Code Image -->
         <div class="qrcode-img"></div>
 
         <!-- Text Input -->
         <div class="text-field">
-            <input type="text" placeholder="https://github.com/Alkaison" name="userInput" id="userInput" required>
+            <input type="text" autofocus placeholder="https://github.com/Alkaison" name="userInput" id="userInput" required>
         </div>
-
         <!-- QR Size Selector -->
         <div class="qrsize-selector">
             <select id="qrSize">
@@ -39,6 +40,5 @@
     <!-- JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js" integrity="sha512-is1ls2rgwpFZyixqKFEExPHVUUL+pPkBEPw47s/6NDQ4n1m6T/ySeDW3p54jp45z2EJ0RSOgilqee1WhtelXfA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/script.js" defer></script>
-    </script>
 </body>
 </html>

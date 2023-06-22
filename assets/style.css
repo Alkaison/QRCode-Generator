@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid red;
 }
 body {
     display: grid;
@@ -12,6 +11,89 @@ body {
     font-weight: 400;
     background-color: #dee2e6;
 }
+
 .container {
-    width: 400px;
+    width: 300px;
+    padding: 12px;
+    background-color: #023e7d;
+    border-radius: 10px;
+}
+#title {
+    padding: 4px;
+    margin: 16px 0;
+    color: white;
+    text-align: center;
+    border-bottom: 2px solid black;
+    border-radius: 500px;
+    box-shadow: 0 2px 2px black;
+}
+.qrcode-img {
+    width: 256px;
+    height: 256px;
+    margin: 10px 10px 24px;
+}
+.text-field, 
+.qrsize-selector,
+.qr-buttons {
+    margin: 8px 8px 12px;
+    background-color: #0466c8;
+    border-radius: 10px;
+}
+#userInput {
+    width: 100%;
+    height: 40px;
+    padding: 12px 8px;
+    outline: transparent;
+    border: transparent;
+    color: #fff;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+}
+#qrSize {
+    width: 100%;
+    padding: 10px 6px;
+    color: white;
+    outline: transparent;
+    border: transparent;
+    background-color: transparent;
+    font-size: 15px;
+    cursor: pointer;
+}
+#qrSize option, #qrSize optgroup {
+    cursor: pointer;
+    background-color: #0466c8;
+}
+.qr-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+#genBtn,
+#downloadBtn {
+    width: 100%;
+    height: 40px;
+    margin: 8px;
+    padding: 12px 8px;
+    border-radius: 6px;
+    outline: transparent;
+    border: 2px solid transparent;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform .05s ease-in;
+}
+#genBtn:hover,
+#downloadBtn:hover {
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+}
+#genBtn:active,
+#downloadBtn:active {
+    transform: scale(0.9);
+}
+/* Text selection */
+::selection {
+    color: coral;
+    background-color: white;
 }
