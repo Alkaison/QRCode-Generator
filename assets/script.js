@@ -1,3 +1,15 @@
+const qrCodeImg = document.querySelector(".qrcode-img");
+
+// Generate initial QR Code 
+let qrCode = new QRCode(qrCodeImg, {
+	text: "https://github.com/Alkaison",
+	width: 256,
+	height: 256,
+	colorDark : "#FFFFFF",
+	colorLight : "#023e7d",
+	correctLevel : QRCode.CorrectLevel.H
+});
+
 /* const qrCodeImg = document.querySelector(".qrcode-img");
 
 var qr = new QRCode(qrCodeImg, "https://github.com/Alkaison");
