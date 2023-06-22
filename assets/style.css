@@ -72,13 +72,14 @@ body {
 #genBtn,
 #downloadBtn {
     width: 100%;
-    height: 40px;
+    min-height: 32px;
     margin: 8px;
-    padding: 12px 8px;
+    padding: 12px 6px;
     border-radius: 6px;
     outline: transparent;
     border: 2px solid transparent;
-    font-size: 14px;
+    font-size: 16px;
+    letter-spacing: 0.4px;
     cursor: pointer;
     transition: transform .05s ease-in;
 }
