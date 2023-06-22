@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- QR Code Image -->
+        <div class="qrcode-img"></div>
+
+        <!-- Text Input -->
+        <div class="text-field">
+            <input type="text" placeholder="https://github.com/Alkaison" name="userInput" id="userInput" required>
+        </div>
+
+        <!-- QR Size Selector -->
+        <div class="qrsize-selector">
+            <select id="qrSize">
+                <optgroup label="Select QR Size">
+                    <option value="128">128 x 128</option>
+                    <option value="256" selected>256 x 256</option>
+                    <option value="512">512 x 512</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div class="qr-buttons">
+            <button type="button" id="genBtn">Generate</button>
+            <button type="button" id="downloadBtn">Download</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js" integrity="sha512-is1ls2rgwpFZyixqKFEExPHVUUL+pPkBEPw47s/6NDQ4n1m6T/ySeDW3p54jp45z2EJ0RSOgilqee1WhtelXfA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/script.js" defer></script>
+    </script>
+</body>
+</html>

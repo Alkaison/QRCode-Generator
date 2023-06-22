@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-weight: 400;
+    background-color: #dee2e6;
+}
+.container {
+    width: 400px;
+}
