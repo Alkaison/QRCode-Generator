@@ -13,13 +13,19 @@
     <div class="container">
         <!-- Title -->
         <h1 id="title">QR Code Gen.</h1>
-        <!-- QR Code Image -->
-        <div class="qrcode-img"></div>
+
+        <div class="img-container">
+            <div class="qrcode-img"></div>
+        </div>
 
         <!-- Text Input -->
         <div class="text-field">
             <input type="text" autofocus placeholder="https://github.com/Alkaison" name="userInput" id="userInput" required>
         </div>
+
+        <!-- Invalid Input -->
+        <label id="invalidInput">Input field can't be empty.</label>
+
         <!-- QR Size Selector -->
         <div class="qrsize-selector">
             <select id="qrSize">

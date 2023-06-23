@@ -27,10 +27,17 @@ body {
     border-radius: 500px;
     box-shadow: 0 2px 2px black;
 }
-.qrcode-img {
+.img-container {
     width: 256px;
     height: 256px;
+    max-width: 256px;
+    max-height: 256px;
     margin: 10px 10px 24px;
+    overflow: hidden;
+}
+.qrcode-img, img {
+    width: 256px;
+    height: 256px;
 }
 .text-field, 
 .qrsize-selector,
@@ -44,12 +51,20 @@ body {
     height: 40px;
     padding: 12px 8px;
     outline: transparent;
-    border: transparent;
+    border: 2px solid transparent;
     color: #fff;
     background-color: transparent;
+    border-radius: 10px;
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 0.8px;
+}
+#invalidInput {
+    display: none;
+    margin: 8px 8px 12px;
+    color: red;
+    font-size: 17px;
+    letter-spacing: 0.5px;
 }
 #qrSize {
     width: 100%;
