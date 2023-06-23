@@ -18,9 +18,12 @@ let qrCode = new QRCode(qrCodeImg, {
 
 // generate new qrCode and show it on screen 
 const generateNewQrCode = () => {
+
+	// get values selected by user 
 	const getText = userInput.value;
 	const getSize = qrSize.value;
 
+	// check if input field is empty 
 	if(getText != '')
 	{
 		// clear previous QrCode 
