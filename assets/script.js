@@ -60,5 +60,11 @@ const downloadQrCode = () => {
 // generate QrCode when clicked on generate button 
 genBtn.addEventListener("click", generateNewQrCode);
 
+// generate QrCode when pressed Enter key down 
+userInput.addEventListener("keydown", (e) => {
+	if(e.key === "Enter")
+		generateNewQrCode();
+})
+
 // download button click event to download the QrCode 
 downloadBtn.addEventListener("click", downloadQrCode);
