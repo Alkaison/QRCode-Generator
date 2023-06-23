@@ -12,7 +12,7 @@ A QR code generator built using HTML, CSS, and JavaScript, along with the qrcode
 
 ## Screenshots 
 
-![QR Code Generator](./assets/QR%20Code%20Made_By_Alkaison.png)
+![QR Code Generator](https://github.com/Alkaison/QRCode-Generator/assets/98116504/2361ad08-2a47-42d0-ab75-1241dfb196f7)
 
 ## Usage
 
