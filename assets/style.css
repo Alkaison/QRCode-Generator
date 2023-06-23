@@ -107,6 +107,11 @@ body {
 #downloadBtn:active {
     transform: scale(0.9);
 }
+/* Download href */
+#downloadSrc {
+    color: inherit;
+    text-decoration: none;
+}
 /* Text selection */
 ::selection {
     color: coral;
