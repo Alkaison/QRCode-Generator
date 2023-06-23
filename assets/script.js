@@ -42,6 +42,7 @@ const generateNewQrCode = () => {
 	}
 	else
 	{
+		// format error message to display 
 		noUserInput.style.display = "block";
 		userInput.style.border = "2px solid red";
 		userInput.focus();
@@ -51,12 +52,9 @@ const generateNewQrCode = () => {
 // download the qrCode 
 const downloadQrCode = () => {
 	
-	// get updated qrCode src 
+	// set updated qrCode src 
 	const qrSource = qrCodeImg.querySelector("img");
 	downloadSrc.href = qrSource.src;
-	
-	// set name for qrCode file 
-	downloadSrc.download = "QR Code Made_By_Alkaison";
 }
 
 // generate QrCode when clicked on generate button 
