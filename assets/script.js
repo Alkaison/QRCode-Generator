@@ -57,6 +57,9 @@ const downloadQrCode = () => {
 	// set updated qrCode src 
 	const qrSource = qrCodeImg.querySelector("img");
 	downloadSrc.href = qrSource.src;
+
+	// set downloading file name 
+	downloadSrc.setAttribute("download", "QR_Code_Made_By_Alkaison");
 }
 
 // generate QrCode when pressed Enter key down 
