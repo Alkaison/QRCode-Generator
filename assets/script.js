@@ -2,8 +2,7 @@ const qrCodeImg = document.querySelector(".qrcode-img");
 const userInput = document.querySelector("#userInput");
 const noUserInput = document.querySelector("#invalidInput");
 const qrSize = document.querySelector("#qrSize");
-const genBtn = document.querySelector("#genBtn");
-const downloadBtn = document.querySelector("#downloadBtn");
+const qrBtnContainer = document.querySelector(".qr-buttons");
 const downloadSrc = document.querySelector("#downloadSrc");
 
 // Generate initial QR Code 
@@ -60,14 +59,19 @@ const downloadQrCode = () => {
 	downloadSrc.href = qrSource.src;
 }
 
-// generate QrCode when clicked on generate button 
-genBtn.addEventListener("click", generateNewQrCode);
-
 // generate QrCode when pressed Enter key down 
 userInput.addEventListener("keydown", (e) => {
 	if(e.key === "Enter")
 		generateNewQrCode();
-})
+});
 
-// download button click event to download the QrCode 
-downloadBtn.addEventListener("click", downloadQrCode);
+// button click listener 
+qrBtnContainer.addEventListener("click", (e) => {
+
+	const clickedBtn = e.target.id;
+	
+	if(clickedBtn === "genBtn")
+		generateNewQrCode();
+	else
+		downloadQrCode();
+});
