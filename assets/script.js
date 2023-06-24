@@ -3,7 +3,6 @@ const userInput = document.querySelector("#userInput");
 const noUserInput = document.querySelector("#invalidInput");
 const qrSize = document.querySelector("#qrSize");
 const qrBtnContainer = document.querySelector(".qr-buttons");
-const downloadSrc = document.querySelector("#downloadSrc");
 
 // Generate initial QR Code 
 let qrCode = new QRCode(qrCodeImg, {
@@ -54,12 +53,22 @@ const generateNewQrCode = () => {
 // download the qrCode 
 const downloadQrCode = () => {
 	
-	// set updated qrCode src 
+	// set updated qrCode src
 	const qrSource = qrCodeImg.querySelector("img");
-	downloadSrc.href = qrSource.src;
+	const link = document.createElement('a');
 
 	// set downloading file name 
-	downloadSrc.setAttribute("download", "QR_Code_Made_By_Alkaison");
+	link.setAttribute("download", "QR-Code-Made-By-Alkaison.png");
+	link.setAttribute("href", qrSource.src);
+
+	// append the link to the button 
+	qrBtnContainer.appendChild(link);
+
+    // trigger the download by simulating a click on the link 
+    link.click();
+
+    // remove the link from the button 
+    qrBtnContainer.removeChild(link);
 }
 
 // generate QrCode when pressed Enter key down 
@@ -71,10 +80,12 @@ userInput.addEventListener("keydown", (e) => {
 // button click listener 
 qrBtnContainer.addEventListener("click", (e) => {
 
+	// get clicked element ID 
 	const clickedBtn = e.target.id;
-	
+
+	// execute functions as per button ID  
 	if(clickedBtn === "genBtn")
 		generateNewQrCode();
-	else
+	else if(clickedBtn === "downloadBtn")
 		downloadQrCode();
 });
