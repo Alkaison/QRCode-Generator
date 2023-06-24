@@ -10,10 +10,6 @@ A QR code generator built using HTML, CSS, and JavaScript, along with the qrcode
 - Lightweight and easy to use.
 - Supports customization through HTML, CSS, and JavaScript.
 
-## Screenshots 
-
-![QR Code Generator](https://github.com/Alkaison/QRCode-Generator/assets/98116504/2361ad08-2a47-42d0-ab75-1241dfb196f7)
-
 ## Usage
 
 To use the QR code generator in your own project, follow these steps:
